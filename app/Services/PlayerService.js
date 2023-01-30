@@ -17,4 +17,4 @@ class PlayerService {
   }
 }
 
-export const PlayerService = new PlayerService()
+export const playerService = new PlayerService()

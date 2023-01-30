@@ -1,4 +1,4 @@
-import { } from "./Controllers/PlayerController.js";
+import { PlayerController } from "./Controllers/PlayerController.js";
 import { ValuesController } from "./Controllers/ValuesController.js";
 
 class App {

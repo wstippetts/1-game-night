@@ -1,5 +1,5 @@
-import { appState } from "..AppState.js"
-import { PlayerService } from "../Services/PlayerService.js"
+import { appState } from "../AppState.js"
+import { playerService } from "../Services/PlayerService.js"
 import { getFormData } from "../Utils/FormHandler.js"
 
 export class PlayerController {
@@ -15,16 +15,16 @@ export class PlayerController {
     window.event.preventDefault()
     const form = window.event.target
     let playerData = getFormData(form)
-    PlayerService.createPlayer(playerData)
+    playerService.createPlayer(playerData)
     this.drawPlayers
   }
 
-  addPlayerPoints(name) {
-    PlayerService.addPlayerPoints(name)
+  addPlayerPoints(points) {
+    playerService.addPlayerPoints(points)
     this.drawPlayers()
   }
-  subPlayerPoints(name) {
-    PlayerService.subPlayerPoints(name)
+  subPlayerPoints(points) {
+    playerService.subPlayerPoints(points)
     this.drawPlayers()
   }
 

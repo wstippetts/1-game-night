@@ -9,9 +9,9 @@ class AppState extends EventEmitter {
   values = loadState('values', [Value])
 
   Players = [
-    new Player(Scott, 0, boss),
-    new Player(Eric, 0, not - boss),
-    new Player(matt, 0, loser)
+    new Player('Scott', 1, 'boss'),
+    new Player('Eric', 1, 'notBoss'),
+    new Player('matt', 1, 'loser')
   ]
 }
 
@@ -27,3 +27,4 @@ export const appState = new Proxy(new AppState(), {
     return true
   }
 })
+console.log(appState.Players)
