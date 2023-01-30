@@ -5,7 +5,7 @@ import { getFormData } from "../Utils/FormHandler.js"
 export class PlayerController {
 
   drawPlayers() {
-    let players = appState.players
+    let players = appState.Players
     let names = ''
     players.forEach(player => names += player.HTMLTemplate)
     document.getElementById('players').innerHTML = names

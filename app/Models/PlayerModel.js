@@ -1,9 +1,9 @@
 export class Player {
 
-  constructor(name, points, img) {
+  constructor(name, points, emoj) {
     this.name = name
     this.points = points
-    this.img = img
+    this.emoj = emoj
   }
 
   addpoints(name) {
