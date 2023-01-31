@@ -41,9 +41,20 @@
   <main>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12">
-          <div id="players"></div>
+        <div class="col-4">
+          <form onsubmit="app.PlayerController.createPlayer()">
+            <div>
+              <label for="name">Player Name:</label>
+              <input class="form-control" id="name" placeholder="player name" type="text" minlength="2" maxlength="15"
+                name="name" required />
+            </div>
+            <div>
+              <button class="btn btn-success" type="submit">Add Player</button>
+            </div>
+          </form>
         </div>
+      </div>
+      <div class="row text-center flex-column align-content-center" id="players">
       </div>
     </div>
   </main>

@@ -3,16 +3,16 @@ import { Player } from "../Models/PlayerModel.js";
 
 class PlayerService {
 
-  addPoint(name) {
+  addPoints(name) {
     let player = appState.Players.find(player => player.name == name)
-    player.addPoints(1)
+    player.addPlayerPoints(1)
   }
-  subPoint(name) {
+  subPoints(name) {
     let player = appState.Players.find(player => player.name == name)
-    player.subPoints(1)
+    player.subPlayerPoints(1)
   }
   createPlayer(playerData) {
-    let newPlayer = new PlayerModel(playerData.name, playerData.points)
+    let newPlayer = new Player(playerData.name, playerData.points)
     appState.Players.push(newPlayer)
   }
 }

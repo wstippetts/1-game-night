@@ -16,15 +16,29 @@ export class PlayerController {
     const form = window.event.target
     let playerData = getFormData(form)
     playerService.createPlayer(playerData)
-    this.drawPlayers
-  }
-
-  addPlayerPoints(points) {
-    playerService.addPlayerPoints(points)
     this.drawPlayers()
   }
-  subPlayerPoints(points) {
-    playerService.subPlayerPoints(points)
+
+  addPlayerPoints(name) {
+    playerService.addPoints(name)
+    this.drawPlayers()
+  }
+  subPlayerPoints(name) {
+    playerService.subPoints(name)
+    this.drawPlayers()
+  }
+
+  addPlayer() {
+    try {
+      window.event.preventDefault()
+      const form = window.event.target
+      // ...
+      // extract form data
+      // ...
+      form.reset()
+    } catch (e) {
+      console.error('[addPlayer]', error)
+    }
     this.drawPlayers()
   }
 
